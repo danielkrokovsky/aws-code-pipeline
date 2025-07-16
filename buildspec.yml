@@ -19,7 +19,7 @@ reports:
   arn:aws:codebuild:us-east-1:563748388618:report-group/aws-code-deploy-test-report:
     base-directory: 'target/surefire-reports'
     files:
-        - TEST-com.packt.aws.books.pipeline.AwsCodePipelineApplicationTests.xml
+        - TEST-com.packt.aws.books.pipeline.DemoApplicationTests.xml
     discard-paths: yes
     file-format: JUNITXML
 artifacts:
