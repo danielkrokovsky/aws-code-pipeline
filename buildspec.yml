@@ -3,22 +3,24 @@ phases:
   install:
     runtime-versions:
       java: corretto11
-  pre_build:
-    commands:
+  pre_build:  
+    commands: 
       - echo Starting pre-build phase
       - java -version
   build:
     commands:
       - echo Build started on `date`
-      - mvn test
+      - mvn test 
   post_build:
     commands:
       - echo Build completed on `date`
       - mvn package
+      - ls
+      - ls target/surefire-reports
 reports:
-  arn:aws:codebuild:us-east-1:563748388618:report-group/aws-code-deploy-test-report:
+  arn:aws:codebuild:us-east-1:279522866734:report-group/aws-code-deploy-test-report:
     base-directory: 'target/surefire-reports'
-    files:
+    files:  
         - TEST-com.packt.aws.books.pipeline.DemoApplicationTests.xml
     discard-paths: yes
     file-format: JUNITXML
