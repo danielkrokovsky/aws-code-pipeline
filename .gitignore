@@ -18,6 +18,11 @@ target/
 *.iws
 *.iml
 *.ipr
+*.zip
+Mvnw*
+.DS_STORE
+.terraform/providers/registry.terraform.io/hashicorp/aws/6.4.0/darwin_amd64/terraform-provider-aws_v6.4.0_x5
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -25,6 +30,8 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
+/.terraform/
+.terraform/providers/registry.terraform.io/*
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/

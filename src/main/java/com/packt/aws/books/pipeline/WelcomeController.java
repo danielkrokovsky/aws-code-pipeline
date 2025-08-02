@@ -17,5 +17,10 @@ public class WelcomeController {
 	public String sayHello() {
 		return appName + "-" + appVersion;
 	}
+	
+	@GetMapping({ "/teste" })
+	public String teste() {
+		return "Funcionou";
+	}
 
 }
