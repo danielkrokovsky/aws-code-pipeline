@@ -1,9 +1,18 @@
+name: aws-code-pipeline
 services:
   server:
-    image: 563748388618.dkr.ecr.us-east-1.amazonaws.com/bia:${TAG}
-    ports:
-      - 8080:8080
     environment:
-      - DB_USER=postgres
-      - DB_PWD=postgres
-      - DB_PORT=5432
+      DB_PORT: "5432"
+      DB_PWD: postgres
+      DB_USER: postgres
+    image: 563748388618.dkr.ecr.us-east-1.amazonaws.com/bia:${TAG}
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8080"
+        protocol: tcp
+networks:
+  default:
+    name: aws-code-pipeline_default

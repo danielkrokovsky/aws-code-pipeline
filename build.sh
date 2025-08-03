@@ -1,4 +1,5 @@
 versao=$(git rev-parse HEAD  | cut -c 1-7)
+mvn clean package
 ECR_REGISTRY=563748388618.dkr.ecr.us-east-1.amazonaws.com
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
 docker build -t bia .
