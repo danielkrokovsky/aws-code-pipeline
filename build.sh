@@ -10,3 +10,4 @@ rm bia-versao-*.zip
 ./gerar-compose.sh
 zip -r bia-versao-$versao.zip docker-compose.yml
 rm docker-compose-dev.yml
+git checkout .
