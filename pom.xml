@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project 
-	xmlns="http://maven.apache.org/POM/4.0.0" 
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -8,25 +8,25 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.packt.aws.books.pipeline</groupId>
 	<artifactId>aws-code-pipeline</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
-	<url/>
+	<url />
 	<licenses>
-		<license/>
+		<license />
 	</licenses>
 	<developers>
-		<developer/>
+		<developer />
 	</developers>
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection />
+		<developerConnection />
+		<tag />
+		<url />
 	</scm>
 	<properties>
 		<java.version>11</java.version>
@@ -42,28 +42,41 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+		<!--
+		https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>codeguru-profiler-java-agent</artifactId>
-            <version>1.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-        </dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>codeguru-profiler-java-agent</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.6</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>3.1.2</version>
+		</dependency>
 	</dependencies>
 	<repositories>
-        <repository>
-            <id>codeguru-profiler</id>
-            <name>codeguru-profiler</name>
-            <url>https://d1osg35nybn3tt.cloudfront.net</url>
-        </repository>
-    </repositories>
+		<repository>
+			<id>codeguru-profiler</id>
+			<name>codeguru-profiler</name>
+			<url>https://d1osg35nybn3tt.cloudfront.net</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
@@ -74,13 +87,14 @@
 		</plugins>
 
 	</build>
-	
+
 	<distributionManagement>
-	  <repository>
-	    <id>packt-packt-maven-repo</id>
-	    <name>packt-packt-maven-repo</name>
-	    <url>https://packt-563748388618.d.codeartifact.us-east-1.amazonaws.com/maven/packt-maven-repo/</url>
-	  </repository>
+		<repository>
+			<id>packt-packt-maven-repo</id>
+			<name>packt-packt-maven-repo</name>
+			<url>
+				https://packt-563748388618.d.codeartifact.us-east-1.amazonaws.com/maven/packt-maven-repo/</url>
+		</repository>
 	</distributionManagement>
 
 </project>
